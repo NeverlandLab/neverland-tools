@@ -8,9 +8,7 @@ install:
 
 release:
 	python -m build
-	include LICENSE
-	include README.md
-	recursive-include src *
+	twine upload dist/*
 
 push:
 	git add . && codegpt commit . && git push
