@@ -7,6 +7,7 @@ install:
 	./.venv/bin/pip-sync -v
 
 release:
+	rm -Rf ./dist
 	python -m build
 	twine upload dist/*
 
