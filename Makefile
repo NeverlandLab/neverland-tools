@@ -7,5 +7,10 @@ install:
 	./.venv/bin/pip-sync -v
 
 release:
-	python setup.py sdist bdist_wheel
-	twine upload dist/*
+	python -m build
+	include LICENSE
+	include README.md
+	recursive-include src *
+
+push:
+	git add . && codegpt commit . && git push
