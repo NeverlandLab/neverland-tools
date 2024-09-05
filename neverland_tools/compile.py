@@ -20,7 +20,7 @@ PROJECT_NAME = ROOT_PATH.split("/")[-1]
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "-i", "--ignore", default=[], nargs="+", help="ignore files for compile."
+        "-i", "--ignore", default=["venv", ".venv"], nargs="+", help="ignore files for compile."
     )
     parser.add_argument("-d", "--dir", default="dist", help="result directory.")
     parser.add_argument("-v", "--version", default=3, help="python version.")

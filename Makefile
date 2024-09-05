@@ -3,7 +3,7 @@ setup:
 	./.venv/bin/pip install pip-tools
 
 install:
-	./.venv/bin/pip-compile --extra dev -v 
+	./.venv/bin/pip-compile --extra dev,compile -v 
 	./.venv/bin/pip-sync -v
 
 release:
