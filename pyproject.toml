@@ -1,32 +1,24 @@
 [build-system]
-requires = ["setuptools>=42", "setuptools_scm[toml]>=6.0.1", "wheel","twine"]
+requires = ["setuptools>=42", "setuptools_scm[toml]>=6.0.1", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "neverland-tools"
-dynamic = [
-  "version",
-]
+dynamic = ["version"]
 description = "A tool to compile Python files to shared objects using Cython."
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
-authors = [
-    {name = "umaru", email = "15875339926@139.com"}
-]
+license = { text = "MIT" }
+authors = [{ name = "umaru", email = "15875339926@139.com" }]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent"
+    "Operating System :: OS Independent",
 ]
-dependencies = [
-    "Cython==3.0.11"
-]
+dependencies = ["Cython==3.0.11"]
 
 [project.optional-dependencies]
-dev = [
-
-]
+dev = ["twine"]
 
 [project.urls]
 "Homepage" = "https://github.com/NeverlandLab/neverland-tools"
@@ -36,4 +28,4 @@ dev = [
 
 [tool.setuptools_scm]
 version_scheme = "guess-next-dev"
-local_scheme = "node-and-date"
+local_scheme = "no-local-version"
